@@ -43,40 +43,17 @@ nav ul li>a{
 .banner-img{
     width: 900px;
 }
-/* mobile responsive */
-@media screen and (max-width:576px){
-    header{
-        padding:5px;
-    }
-    .banner-img,.banner-content{
-        width: 100%;
-    }
-    nav{
-        flex-direction: column;
-    }
-}
-/* tablets responsive */
-@media screen and (min-width:576px) and (max-width:992px)
-{
-    header{
-        padding:40px;
-    }
-    .banner-img,.banner-content{
-        width: 100%;
-    }
-    nav{
-        flex-direction: column;
-    }
-}
+
 /*  main section */
 main{
-    max-width: 1220px;
-    margin: 0 auto;
+   max-width: 1220px;
+    padding: 0px 200px;
+    margin: 50px auto;
 }
 .feature{
     display: flex;
     align-items: center;
-    margin-top: 50px;
+   
 
 }
 .team-img{
@@ -88,8 +65,8 @@ main{
     height: 250px;
 }
 .team-content{
-    padding-left: 100px;
-    padding-right: 100px;
+    padding-left: 50px;
+    padding-right: 10px;
 }
 .text1{
     font-size: 3rem;
@@ -105,4 +82,64 @@ main{
     font-size: 3rem;
     font-weight: 700;
     color: rgb(238, 59, 59);
+}
+.feature-card{
+    display: flex;
+    justify-content: space-around;
+}
+.feature-card .card h2{
+font-size: 3rem;
+font-weight: 700;
+margin-top: 2px;
+margin-bottom: 2px;
+}
+.feature-card .card p{
+    color: #353333;
+}
+.feature-card .card{
+    border: 1px solid rgb(211, 46, 46);
+    border-radius: 4px;
+    padding: 30px;
+    text-align: center;
+}
+/* mobile responsive */
+@media screen and (max-width:576px){
+    header,main{
+        padding:10px;
+    }
+    .banner-img,.banner-content,.team-content{
+        width: 100%;
+    }
+    nav,.feature{
+        flex-direction: column;
+    }
+    .team-img{
+        grid-template-columns: 1fr;
+        
+    }
+    .feature{
+        flex-direction: column-reverse;
+    }
+   
+}
+/* tablets responsive */
+@media screen and (min-width:576px) and (max-width:992px)
+{
+    header,main{
+        padding:40px;
+    }
+    .banner-img,.banner-content{
+        width: 100%;
+    }
+    nav,{
+        flex-direction: column;
+    }
+    .team-img{
+      gap: 20px;
+        
+    }
+    .feature{
+        flex-direction: column-reverse;
+    }
+    
 }
